@@ -1,14 +1,14 @@
 {
   "name": "cdek-sdk",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.4.1",
+  "description": "CDEK SDK for JavaScript",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Boris Shishkin",
+  "license": "GPL-3.0",
   "dependencies": {
     "@types/request": "^2.48.5",
     "request": "^2.88.2"
@@ -16,5 +16,16 @@
   "devDependencies": {
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KinShish/cdek_sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KinShish/cdek_sdk/issues"
+  },
+  "homepage": "https://github.com/KinShish/cdek_sdk#readme"
 }
