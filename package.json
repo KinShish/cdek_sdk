@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Boris Shishkin",
+  "author": "Shishkin Boris",
   "license": "GPL-3.0",
   "dependencies": {
     "@types/request": "^2.48.5",
