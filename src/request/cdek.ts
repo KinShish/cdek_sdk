@@ -8,10 +8,15 @@ interface Options{
 	form?:{};
 }
 export default class RequestApi {
+	url:string;
+	getUrl(test:boolean){
+		this.url=test?'https://api.edu.cdek.ru/v2/':'https://api.cdek.ru/v2/'
+	};
 	async api(method:string,url:string,formData:any,token:string){
+		this.url=this.url===undefined?'https://api.edu.cdek.ru/v2/':this.url;
 		const options:Options={
 			method: method,
-			url: 'https://api.edu.cdek.ru/v2/' + encodeURI(url),
+			url: this.url + encodeURI(url),
 			json: true,
 			headers:{}
 		}
@@ -22,6 +27,7 @@ export default class RequestApi {
 			options.form=formData;
 			options.headers={'Content-Type':'application/x-www-form-urlencoded'}
 		}
+		console.log(this.url)
 		return await new Promise((resolve)=>{
 			rp(options,function (err, resp, body){
 				if(err){

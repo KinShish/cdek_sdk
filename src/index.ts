@@ -17,7 +17,7 @@ const formationResponse=async (method,url,data,token)=>{
 }
 export interface Login {
 	account: string;
-	secret: number;
+	secret: string;
 }
 interface errors{
 	code:string;
@@ -41,6 +41,9 @@ interface AddRequest{
 }
 
 class Cdek_sdk {
+	getTestServer(test:boolean){
+		request.getUrl(test)
+	}
 	async getToken(login:Login){
 		const oath:any=await request.api('POST','oauth/token?parameters',{
 			grant_type:'client_credentials',

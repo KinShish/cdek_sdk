@@ -67,6 +67,9 @@ var formationResponse = function (method, url, data, token) { return __awaiter(v
 var Cdek_sdk = /** @class */ (function () {
     function Cdek_sdk() {
     }
+    Cdek_sdk.prototype.getTestServer = function (test) {
+        request.getUrl(test);
+    };
     Cdek_sdk.prototype.getToken = function (login) {
         return __awaiter(this, void 0, void 0, function () {
             var oath;

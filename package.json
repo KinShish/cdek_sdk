@@ -1,6 +1,6 @@
 {
   "name": "cdek-sdk",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "CDEK SDK for JavaScript",
   "main": "index.ts",
   "scripts": {

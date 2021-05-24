@@ -40,15 +40,20 @@ var rp = require("request");
 var RequestApi = /** @class */ (function () {
     function RequestApi() {
     }
+    RequestApi.prototype.getUrl = function (test) {
+        this.url = test ? 'https://api.edu.cdek.ru/v2/' : 'https://api.cdek.ru/v2/';
+    };
+    ;
     RequestApi.prototype.api = function (method, url, formData, token) {
         return __awaiter(this, void 0, void 0, function () {
             var options;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        this.url = this.url === undefined ? 'https://api.edu.cdek.ru/v2/' : this.url;
                         options = {
                             method: method,
-                            url: 'https://api.edu.cdek.ru/v2/' + encodeURI(url),
+                            url: this.url + encodeURI(url),
                             json: true,
                             headers: {}
                         };
@@ -60,6 +65,7 @@ var RequestApi = /** @class */ (function () {
                             options.form = formData;
                             options.headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
                         }
+                        console.log(this.url);
                         return [4 /*yield*/, new Promise(function (resolve) {
                                 rp(options, function (err, resp, body) {
                                     if (err) {

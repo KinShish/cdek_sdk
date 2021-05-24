@@ -4,6 +4,7 @@
 // @ts-check
 
 const {cdek}=require('../index')
+cdek.getTestServer(true);
 const fs=require('fs')
 const options=require('./config/config.json')
 const checkToken = async (cb,dt)=>{
@@ -19,7 +20,7 @@ const checkToken = async (cb,dt)=>{
 const start=async ()=>{
 	//cdek.getDeliveryPoints(options.token,{weight_max:50,city_code:270,allowed_cod:1})
 	//const data=await checkToken(cdek.getDeliveryPoint)
-	//const www=await checkToken(cdek.getLocationRegions,{country_codes:['RU'],lang:'rus',region_code:7})
+	const www=await checkToken(cdek.getLocationRegions,{country_codes:['RU'],lang:'rus',region_code:7})
 	//const req=await checkToken(cdek.getLocationCities,{country_codes:['RU'],lang:'rus',code:137})
 	//const req=await checkToken(cdek.getDeliveryPoints,{weight_max:50,city_code:270,lang:'rus',allowed_cod:'1'})
 	/*const req=await checkToken(cdek.calculateOnTariffList,{
@@ -175,12 +176,12 @@ const start=async ()=>{
 		]
 	})
 	//*/
-	//console.log(req)
+	console.log(www)
 	//const req2=await checkToken(cdek.deleteOrder,{uuid:'72753031-df71-417e-9619-7e54568a2c57'})
 	//const req2=await checkToken(cdek.refusalOrder,{uuid:'72753031-700d-42a8-8fef-1b6dc706aaa1'})
 	//console.log(req2)
-	const req2=await checkToken(cdek.getOrder,{uuid:'72753031-df71-417e-9619-7e54568a2c57'})
-	console.log(req2,req2.data.statuses)
+	//const req2=await checkToken(cdek.getOrder,{uuid:'72753031-df71-417e-9619-7e54568a2c57'})
+	//console.log(req2,req2.data.statuses)
 
 
 
