@@ -128,7 +128,7 @@ export default class Change{
     };
     changeMoney(data:DataForRequest.Money,res){
         if(data){
-            if(!data.value){
+            if(data.value===undefined){
                 res.errors.push(this.getError("Доп. сбор за доставку, которую ИМ берет с получателя. Только для заказов 'интернет-магазин: float"))
             }
         }

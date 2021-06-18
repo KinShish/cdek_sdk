@@ -20,8 +20,8 @@ const checkToken = async (cb,dt)=>{
 const start=async ()=>{
 	//cdek.getDeliveryPoints(options.token,{weight_max:50,city_code:270,allowed_cod:1})
 	//const data=await checkToken(cdek.getDeliveryPoint)
-	const www=await checkToken(cdek.getLocationRegions,{country_codes:['RU'],lang:'rus',region_code:7})
-	//const req=await checkToken(cdek.getLocationCities,{country_codes:['RU'],lang:'rus',code:137})
+	//const www=await checkToken(cdek.getLocationRegions,{country_codes:['RU'],lang:'rus',region_code:7})
+	const req=await checkToken(cdek.getLocationCities,{country_codes:['RU'],lang:'rus',city:"Славянск-на-Кубани"})
 	//const req=await checkToken(cdek.getDeliveryPoints,{weight_max:50,city_code:270,lang:'rus',allowed_cod:'1'})
 	/*const req=await checkToken(cdek.calculateOnTariffList,{
 		type: 2,
@@ -39,7 +39,7 @@ const start=async ()=>{
 		tariff_code:11,
 		from_location:{code:270},
 		to_location:{code:44},
-		services:[{code:"DANGER_CARGO",parameter:2}],
+		services:[{code:https://alna.ru/it/photo/goods/242151"DANGER_CARGO",parameter:2}],
 		packages: [{height: 10,length: 10,weight: 4000,width: 10}]
 	})*/
 	//const req=await checkToken(cdek.calculateOnDdp,{weight: 1000,cost: '50000'})
@@ -176,7 +176,7 @@ const start=async ()=>{
 		]
 	})
 	//*/
-	console.log(www)
+	console.log(req)
 	//const req2=await checkToken(cdek.deleteOrder,{uuid:'72753031-df71-417e-9619-7e54568a2c57'})
 	//const req2=await checkToken(cdek.refusalOrder,{uuid:'72753031-700d-42a8-8fef-1b6dc706aaa1'})
 	//console.log(req2)
